@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%  block title %}{% endblock %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+    <div class="navbar navbar-light bg-primary justify-content-between">
+        <a href="/" class="navbar-brand text-light">Flask Feedback</a>
+        <ul class="nav navbar-nav flex-row float-right">
+            {% if user %}
+            <li class="nav-item"><a href="/users/{{user.username}}" class="nav-link pr-3 text-light">{{user.username}}</a></li>
+            <li class="nav-item"><a href="/logout" class="nav-link text-li">Logout</a></li>
+            {% else %}
+            <li class="nav-item"><a href="/register" class="nav-link pr-3 text-light">Register</a></li>
+            <li class="nav-item"><a href="/login" class="nav-link text-li">Login</a></li>
+            {% endif %}
+        </ul>
+    </div>
+    <div class="container">
+        {% for category, msg in get_flashed_messages(with_categories=True) %}
+        <div class="alert alert-danger">{{ msg }}</div>
+        {% endfor %}
+
+        {% block content %}
+        <h1>This is the base html page</h1>    
+        {% endblock %}
+    </div>       
+</body>
+</html>

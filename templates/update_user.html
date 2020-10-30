@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 class="display-4">Update Account</h1>
+<form action="/users/{{user.username}}/update" method="POST">
+  {{ form.hidden_tag() }}
+  <div class="input">
+    <div>{{user.username}}</div>
+    <div>{{form.username}}</div>
+  </div>
+  <div class="input">
+    <div>New password</div>
+    <div>{{form.password}}</div>   
+  </div>
+  <div class="input">
+    <div>{{user.email}}</div>
+    <div>{{form.email}}</div>
+  </div>
+  <div class="input">
+    <div>{{user.first_name}}</div>
+    <div>{{form.first_name}}</div>
+  </div>
+  <div class="input">
+    <div>{{user.last_name}}</div>
+    <div>{{form.last_name}}</div>
+  </div>
+  <button type="submit">Update Account</button>
+
+</form>
+
+{% endblock %}

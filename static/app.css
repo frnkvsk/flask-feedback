@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+   width: 80%;
+}
+
+.feedback {
+    display: grid;
+    grid-template-columns: auto 20%;
+    width: 100%; 
+}
+
+.feedback-content {
+    word-wrap: break-word;
+}
+
+a {
+    height: 20px;
+    margin: 20px;
+}
+
+.input {
+    margin: 20px 0 20px 0;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.register-label {
+    font-family: Montserrat;
+    font-size: 22px;
+    margin: 10px 0 0 0;
+}
+.register-input {
+    font-family: Montserrat;
+    font-size: 22px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid rgb(148, 147, 147);
+}
+.register-input:hover {
+    border: 1.5px solid rgb(95, 204, 240);
+}
+
+.btn {    
+    margin: 20px 0 0 0;
+}
+
+.secret,
+h3 {
+    margin: 20px;
+    color: rgb(109, 198, 228);
+    
+}
+
+.secret-form {
+    padding: 15px;
+    border: 1px solid rgb(211, 209, 209);
+}
+
+.secret-form, .btn {
+    margin: 20px 0 0 0;
+    border: 1px solid rgb(211, 209, 209);
+}
+
+.secret-footer {
+    margin: 35px;
+}

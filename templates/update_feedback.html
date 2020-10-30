@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 class="display-4">Update Feedback</h1>
+<form action="/feedback/{{feedback.id}}/update" method="POST">
+  {{ form.hidden_tag() }}
+  <div class="register">
+    <div class="register-row">
+      <label class="register-label">{{feedback.title}}</label>      
+      {{form.title(class="register-input")}}
+    </div>
+    <div class="register-row">
+      <label class="register-label">{{feedback.content}}</label>      
+      {{form.content(class="register-input")}}
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  
+</form>
+
+{% endblock %}
